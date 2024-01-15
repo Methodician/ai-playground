@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "general-ai-playground": {
+      "hosting": {
+        "ai-playground": [
+          "general-ai-playground"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "general-ai-playground"
+  }
+}

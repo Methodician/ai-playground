@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "ai-playground",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}

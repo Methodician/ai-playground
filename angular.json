@@ -96,6 +96,23 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "ai-playground:build:production",
+              "serveTarget": "ai-playground:serve:production"
+            },
+            "development": {
+              "buildTarget": "ai-playground:build:development",
+              "serveTarget": "ai-playground:serve:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }
