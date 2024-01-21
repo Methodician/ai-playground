@@ -15,25 +15,21 @@ export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
     provideAnimations(),
-    importProvidersFrom(
-      provideFirebaseApp(() =>
-        initializeApp({
-          projectId: 'general-ai-playground',
-          appId: '1:849308903389:web:e35bcf2c5f1db235b67834',
-          databaseURL:
-            'https://general-ai-playground-default-rtdb.firebaseio.com',
-          storageBucket: 'general-ai-playground.appspot.com',
-          apiKey: 'AIzaSyCqeeYdOPPymbyoNdhrEVVSZEWT_-iccRI',
-          authDomain: 'general-ai-playground.firebaseapp.com',
-          messagingSenderId: '849308903389',
-        })
-      )
-    ),
+    importProvidersFrom(provideFirebaseApp(() => initializeApp({
+        projectId: 'general-ai-playground',
+        appId: '1:849308903389:web:e35bcf2c5f1db235b67834',
+        databaseURL: 'https://general-ai-playground-default-rtdb.firebaseio.com',
+        storageBucket: 'general-ai-playground.appspot.com',
+        apiKey: 'AIzaSyCqeeYdOPPymbyoNdhrEVVSZEWT_-iccRI',
+        authDomain: 'general-ai-playground.firebaseapp.com',
+        messagingSenderId: '849308903389',
+    }))),
     importProvidersFrom(provideAuth(() => getAuth())),
     importProvidersFrom(provideFirestore(() => getFirestore())),
     importProvidersFrom(provideDatabase(() => getDatabase())),
     importProvidersFrom(provideFunctions(() => getFunctions())),
     importProvidersFrom(providePerformance(() => getPerformance())),
     importProvidersFrom(provideStorage(() => getStorage())),
-  ],
+    provideAnimations()
+],
 };

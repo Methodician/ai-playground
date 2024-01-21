@@ -1,0 +1,14 @@
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav mode="side" position="end">
+    <mat-list>
+      <mat-list-item (click)="sidenav.toggle()">
+        <a routerLink="/">Home</a>
+      </mat-list-item>
+      <mat-list-item (click)="sidenav.toggle()">
+        <a routerLink="/guide">Guide</a>
+      </mat-list-item>
+    </mat-list>
+  </mat-sidenav>
+
+  <ng-content></ng-content>
+</mat-sidenav-container>
